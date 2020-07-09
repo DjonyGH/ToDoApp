@@ -1,38 +1,29 @@
-$(function(){	
-	var numDeal = 1; //номер (первого) дела
+var newDealBtn = document.querySelector('.newdeal__btn');
+var newDealInput = document.querySelector('.newdeal__input');
+var dealList = document.querySelector('.deal-list');
+var numberDeal = 0;
 
-	function createNewDeal(){
-		if ($('.newdeal__name').val().length > 0) {		//Проверяем на наличие заголовка	
-			$('#deal-list').append('<div class="deal" id="deal-' + numDeal +'"><h3 class="deal__title">' + $('.newdeal__name').val() + '</h3><button class="deal__close" id="close-btn-' + numDeal + '"><img src="img/clear-button.png"></button><button class="deal__hide" id="hide-btn-' + numDeal + '"><img src="img/arrow-down.png" alt=""></button><div class="deal__description">' + $('.newdeal__description').val() + '</div></div>');
-			$('.newdeal__name').val(''); //очищаем поле ввода заголовка дела
-			$('.newdeal__description').val(''); // очищаем поле ввода описания дела
-			$('#close-btn-' + numDeal).on('click', deleteDeal); //создаем обработчик кнопки close для каждого дела
-			$('#hide-btn-' + numDeal).on('click', hideDeal); //создаем обработчик кнопки hide для каждого дела			
-			numDeal++; //увеличиваем номер для следющего дела
-		}  
-		else { //при отсутствии заголовка делаем рамку поля ввода заголовка красной
-			$('.newdeal__name').addClass('error');
-		}
-	};
+function createNewDeal() {
+	if (newDealInput.value.length > 0 ) {
+		var curentDeal = document.createElement('li');
+		curentDeal.classList.add('deal-item');
+		curentDeal.setAttribute('id', 'deal-' + numberDeal);
+		curentDeal.innerHTML = newDealInput.value;
+		dealList.append(curentDeal);
+		numberDeal++;
+		newDealInput.value = '';
+	} else {
+		newDealInput.classList.add('error');
+	}	
+}
 
-	function hideRedBorder(){
-		$('.newdeal__name').removeClass('error');
-	}
 
-	function deleteDeal(){
-		console.log('Кнопка ' + $(this).attr('id') + ' нажата');
-		$(this).parent().remove(); //удаляем родительский контейнер кнопкм close, (this - это кнопка close, т.к. эту функцию вызвал обработчик этой кнопки)
-	};
+newDealBtn.addEventListener('click', createNewDeal);
 
-	function hideDeal(){
-		console.log('Кнопка ' + $(this).attr('id') + ' нажата');
-		$(this).children('img').toggleClass('arrow-rotate'); //переворачиваем стрелку на кнопке
-		$(this).siblings('.deal__description').slideToggle(); //скрываем контейнер с описанием дела
-		// $(this).parent().animate({minHeight: "25px"}, 400); // делаем контейнер с делом узким
-	};
+newDealInput.addEventListener('keydown', function(){
+	newDealInput.classList.remove('error');
+});
 
-		
-	$('.newdeal__btn').on('click', createNewDeal);
-	$('.newdeal__name').keydown(hideRedBorder);
-
+dealList.addEventListener('mousedown', function(ev){
+	ev.target.classList.toggle('finished');
 });

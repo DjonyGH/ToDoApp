@@ -1,41 +1,32 @@
 ﻿<!DOCTYPE html>
 <html lang="ru">
 	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Органайзер</title>
 		<link rel="stylesheet" type="text/css" href="styles/styles.css">
-		<script src="scripts/jquery-3.5.0.min.js" type="text/javascript"></script>
-		<script src="scripts/script-2.js" type="text/javascript"></script>
-
-		<!-- Bootstrap -->
-		<link rel="stylesheet" href="styles/bootstrap.min.css">
-		<script src="scripts/bootstrap.min.js"></script>
-
-		<!-- Font Awesome -->
-		<link rel="stylesheet" href="fonts/FontAwesome/css/all.min.css">
-		<meta name="msapplication-TileColor" content="#00a300">
-		<meta name="theme-color" content="#ffffff">
+		<script src="scripts/script.js" type="text/javascript" defer></script>
 	</head>
 	<body>
-		<div class="container-fluid my-font">
-			<div class="container">
-				<div class="row justify-beetwen mt-5">
-					<div class="col-12 col-md-6 order-2 order-md-0" id="deal-list">
-						<h2 class="h4 font-weight-normal mb-3 mt-3 mt-md-0">Список дел:</h1>
-					</div>
+		<div class="wrapper clearfix">
+			<!-- Список дел -->
+			<div class="col left">
+				<h2 class="title">Список дел:</h2>
+				<div class="deals-box">
+					<ol class="deal-list">
+						<!-- <li class="deal-item" id="deal-1">Первое дело</li>
+						<li class="deal-item" id="deal-2">Второе дело</li> -->
+					</ol>
+				</div>				
+			</div>
 
-					<div class="col-12 col-md-6 order-1">
-						<h2 class="h4 font-weight-normal mb-3">Добавить новое дело</h1>
-						<div class="bg-white d-flex flex-column px-4 py-3">
-							<label class="text-muted">* Название</label>
-							<textarea  class="newdeal-name my-border mb-4" maxlength="30"></textarea>
-							<label class="text-muted">* Описание</label>
-							<textarea class="newdeal-description my-border mb-4" maxlength="1000"></textarea>
-							<button class="newdeal-btn btn btn-primary rounded-0">Добавить дело</button>
-						</div>
-					</div>
+			<!-- Форма добавления дела -->
+			<div class="col right">
+				<h2 class="title">Добавить новое дело</h2>
+				<div class="newdeal">
+					<label class="newdeal__title">* Название</label>
+					<textarea class="newdeal__input" maxlength="2000"></textarea>
+					<button class="newdeal__btn">Добавить дело</button>
 				</div>
 			</div>
-		</div>		
+		</div>
 	</body>
 </html>
