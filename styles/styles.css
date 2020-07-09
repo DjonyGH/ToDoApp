@@ -3,129 +3,43 @@ html, body{
 	padding: 0;
 	font-family: Arial;
 	background: #f5f5f5;
+	min-width: 333px;
 }
 
-.wrapper{
-	margin: 0 auto;
-	width: 960px;
-	/*border: 1px solid black;*/
+.my-btn:focus, .my-btn:active{
+	outline: 0;
+}
+.error{
+	outline: 2px solid red;
 }
 
-.clearfix{
-	overflow-y: hidden;
+.my-font{
+	background: #f5f5f5;
 }
 
-.left-1{
-	float: left;
-	margin-right: 10px;
+.my-border{
+	border: 2px solid #ebebeb;
 }
 
-.left-2{
-	float: left;
-	margin-left: 10px;
+.newdeal-name{
+	height: 45px;
+	resize: none;		
 }
+	.newdeal-name:focus, .newdeal-name:active{
+		outline: 2px solid #007bff;
+	}
 
-.right{
-	float: right;
+.newdeal-description{
+	height: 105px;
+	resize: none;
 }
+	.newdeal-description:focus, .newdeal-description:active{
+		outline: 2px solid #007bff;
+	}
 
-.deal-box{
-	padding-top: 70px;
-	width: 470px;
+.newdeal-btn{
+	width: 225px;
+	height: 55px;
+	border-style: none;
+	font-size: 16px;
 }
-
-.title{
-	font-size: 21px;
-	font-weight: normal;
-}
-
-.deal{
-	width: 440px;
-	background: white;
-	margin-bottom: 20px;
-	padding: 20px 10px 20px 20px;
-}
-	.deal__title{
-		display: inline-block;
-		font-weight: normal;
-		margin: 0;
-		padding: 0;	
-		margin-right: 10px;
-		margin-bottom: 10px;			
-	}
-
-	.deal__close{	
-		display: inline-block;
-		background: white;
-		border: none;
-		padding: 0;
-		width: 16px;
-		height: 16px;
-	}
-
-	.deal__hide{
-		display: inline-block;	
-		background: white;
-		border: none;
-		padding: 0;
-		margin: 4px 15px 0 0;
-		width: 26px;
-		height: 16px;
-		float: right;
-	}
-
-	.deal__hide:focus, .deal__hide:active{
-		outline: 0;
-	}
-
-	.deal__description{
-		font-size: 14px;
-		color: #adb4c5;		
-		width: 420px;		
-	}
-
-.arrow-rotate{
-	transform: rotate(180deg);
-}	
-
-
-
-.newdeal{
-	padding: 30px 40px;
-	background: white;
-}
-	.newdeal__title{
-		font-size: 14px;
-		color: #adb4c5;
-	}
-
-	.newdeal__name{
-		width: 386px;
-		height: 45px;
-		margin-top: 5px;
-		margin-bottom: 20px;
-		border: 2px solid #ebebeb;
-		resize: none;		
-	}
-
-	.newdeal__description{
-		width: 386px;
-		height: 105px;
-		margin-top: 5px;
-		margin-bottom: 20px;
-		border: 2px solid #ebebeb;
-		resize: none;
-	}
-
-	.error{
-		border: 2px solid red;
-	}
-
-	.newdeal__btn{
-		width: 225px;
-		height: 55px;
-		background: #2174fd;
-		color: white;
-		border-style: none;
-		font-size: 16px;
-	}
