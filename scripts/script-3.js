@@ -11,7 +11,6 @@
 		if (newdealName.value.length > 0) {
 			if (newdeaelDescription.value.length > 0) {
 				dealList.insertAdjacentHTML('beforeend', '<div class="bg-white px-4 py-3 mb-4" id="deal-' + numDeal +'"><div class="mb-3"><h3 class="h4 font-weight-normal d-inline mr-1">' + newdealName.value + '</h3><button class="my-btn text-danger border-0 bg-white" id="close-btn-' + numDeal +'"><i class="fas fa-times"></i></button><button class="my-btn border-0 bg-white float-right" id="hide-btn-' + numDeal + '"><i class="fas fa-chevron-down"></i></button></div><p class="text-muted p-0 mt-3" id="deal-description">' + newdeaelDescription.value + '</p></div>');
-				// dealList.append(`<div class="bg-white px-4 py-3 mb-4" id="deal-${numDeal}"><div class="mb-3"><h3 class="h4 font-weight-normal d-inline mr-1">${newdealName.value}</h3><button class="my-btn text-danger border-0 bg-white" id="close-btn-${numDeal}"><i class="fas fa-times"></i></button><button class="my-btn border-0 bg-white float-right" id="hide-btn-${numDeal}"><i class="fas fa-chevron-down"></i></button></div><p class="text-muted p-0 mt-3" id="deal-description">${newdeaelDescription.value}</p></div>`);
 				newdealName.value = '';
 				newdeaelDescription.value = '';
 				console.log('test1');
