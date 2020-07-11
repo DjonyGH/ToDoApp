@@ -10,31 +10,39 @@ html, body{
 	outline: 0;
 }
 .error{
-	outline: 2px solid red;
+	/* outline: 2px solid red; */
+	outline: none;
+	border: 2px solid red!important;
 }
 
 .my-font{
 	background: #f5f5f5;
 }
 
-.my-border{
+/* .my-border{
 	border: 2px solid #ebebeb;
-}
+	border: 2px solid #ebebeb;
+} */
 
 .newdeal-name{
 	height: 45px;
-	resize: none;		
+	resize: none;
+	border: 2px solid #ebebeb;		
 }
 	.newdeal-name:focus, .newdeal-name:active{
-		outline: 2px solid #007bff;
+		outline: none;
+		border: 2px solid #007bff;
 	}
 
 .newdeal-description{
 	height: 105px;
 	resize: none;
+	border: 2px solid #ebebeb;
+	overflow-x: hidden;
 }
 	.newdeal-description:focus, .newdeal-description:active{
-		outline: 2px solid #007bff;
+		outline: none;
+		border: 2px solid #007bff;
 	}
 
 .newdeal-btn{
@@ -42,4 +50,9 @@ html, body{
 	height: 55px;
 	border-style: none;
 	font-size: 16px;
+}
+
+.deal{
+	overflow: hidden;
+	transition: height 500ms cubic-bezier(0, 0, 1, 1) 100ms;
 }
