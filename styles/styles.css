@@ -19,11 +19,6 @@ html, body{
 	background: #f5f5f5;
 }
 
-/* .my-border{
-	border: 2px solid #ebebeb;
-	border: 2px solid #ebebeb;
-} */
-
 .newdeal-name{
 	height: 45px;
 	resize: none;
@@ -55,4 +50,7 @@ html, body{
 .deal{
 	overflow: hidden;
 	transition: height 500ms cubic-bezier(0, 0, 1, 1) 100ms;
+}
+#deal-description{
+	word-wrap: break-word;
 }

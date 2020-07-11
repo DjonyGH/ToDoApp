@@ -20,6 +20,7 @@
 				console.log('test1');
 				document.querySelector(`#close-btn-${numDeal}`).addEventListener('click', deleteDeal);
 				document.querySelector(`#hide-btn-${numDeal}`).addEventListener('click', hideDeal);
+				console.log(startHeightDealElement[numDeal]);
 				numDeal++;
 			}
 			else newdeaelDescription.classList.add('error');
